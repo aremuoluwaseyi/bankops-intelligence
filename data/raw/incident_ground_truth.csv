@@ -1,0 +1,6 @@
+incident_id,incident_name,started_at,ended_at,affected_services,affected_component,severity,ground_truth_failure_domain,confirmed_synthetic_root_cause,dominant_error_code,target_failure_rate
+INC001,External Payment Provider Degradation,2026-10-01 10:40:00,2026-10-01 11:10:00,S001,C003,High,External Payment Provider,Synthetic external payment provider latency degradation,GW_TIMEOUT,0.16
+INC002,OTP Provider Degradation,2026-10-01 14:15:00,2026-10-01 14:40:00,S003;S004,C004,High,OTP Provider,Synthetic OTP provider response-time degradation,OTP_TIMEOUT,0.13
+INC003,Operational Database Slowdown,2026-10-01 16:00:00,2026-10-01 16:25:00,S003;S007,C006,High,Operational Database,Synthetic database query-latency spike,DB_TIMEOUT,0.1
+INC004,Bill Payment Provider Degradation,2026-10-01 18:20:00,2026-10-01 18:45:00,S005,C008,High,Bill Payment Provider,Synthetic bill-payment provider latency degradation,BILLER_TIMEOUT,0.18
+INC005,Post-Deployment Payment Service Regression,2026-10-01 20:00:00,2026-10-01 20:30:00,S001;S002;S005;S006,C001,Critical,Payment Service,Synthetic application regression after deployment,APP_500,0.11

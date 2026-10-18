@@ -1,0 +1,11 @@
+component_id,component_name,component_type,criticality
+C001,Payment Service,Application,Critical
+C002,Core Banking System,Internal System,Critical
+C003,External Payment Provider,External Provider,Critical
+C004,OTP Provider,External Provider,High
+C005,Authentication Service,Application,Critical
+C006,Operational Database,Database,Critical
+C007,API Gateway,Integration,Critical
+C008,Bill Payment Provider,External Provider,High
+C009,Airtime Provider,External Provider,Medium
+C010,Account Service API,Application,High
