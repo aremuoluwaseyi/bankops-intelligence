@@ -1,0 +1,4 @@
+control_id,control_name,service_id,expected_incident,expected_severity,expected_failure_domain,reason
+CTRL001,Payday Volume Surge,S001,False,NONE,NONE,High transfer volume with normal service quality.
+CTRL002,Promotional Airtime Surge,S006,False,NONE,NONE,High demand from a fictional promotion; no technical incident.
+CTRL003,API Partner Traffic Spike,S007,False,NONE,NONE,Large API traffic increase while service quality remains healthy.

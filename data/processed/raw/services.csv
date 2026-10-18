@@ -1,0 +1,8 @@
+service_id,service_name,category,criticality,active
+S001,Interbank Transfer,Payments,Critical,True
+S002,Intrabank Transfer,Payments,Critical,True
+S003,Authentication,Access,Critical,True
+S004,OTP,Access,High,True
+S005,Bill Payment,Payments,High,True
+S006,Airtime and Data,Payments,Medium,True
+S007,Account Services,Accounts,High,True

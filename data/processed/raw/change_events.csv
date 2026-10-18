@@ -1,0 +1,3 @@
+change_id,timestamp,component_id,change_type,version,description,status,related_scenario
+CHG001,2026-10-01 19:52:00,C001,Deployment,payment-service-v2.4.0,Synthetic payment service release before INC005,Completed,INC005
+CHG002,2026-10-01 08:30:00,C010,Configuration,account-api-config-r3,Routine synthetic configuration update with no incident,Completed,NORMAL_CONTROL
