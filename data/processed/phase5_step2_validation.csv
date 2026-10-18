@@ -1,0 +1,9 @@
+check,status,detail
+Unique feature rows,PASS,One detector row per monitoring_window_id.
+Normal-only baseline,PASS,Baseline statistics use NORMAL windows only.
+No labels in feature handoff,PASS,Evaluation labels remain outside detector input.
+Robust thresholds valid,PASS,All IQR values are non-negative.
+Minimum-volume safeguard,PASS,Failure-rate anomaly cannot fire below volume 10.
+Missing component telemetry does not fire,PASS,Missing telemetry is not treated as anomalous.
+Binary predictions,PASS,Predictions are binary.
+Evaluation complete,PASS,Confusion matrix covers all rows.

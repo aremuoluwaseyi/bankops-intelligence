@@ -1,0 +1,21 @@
+service_name,component_name,dependency_type,criticality
+Account Services,Account Service API,Direct,Critical
+Account Services,Core Banking System,Direct,Critical
+Account Services,Operational Database,Data,Critical
+Airtime and Data,Airtime Provider,External,High
+Airtime and Data,Payment Service,Direct,Medium
+Authentication,Authentication Service,Direct,Critical
+Authentication,OTP Provider,External,High
+Authentication,Operational Database,Data,Critical
+Bill Payment,API Gateway,Direct,High
+Bill Payment,Bill Payment Provider,External,Critical
+Bill Payment,Payment Service,Direct,High
+Interbank Transfer,API Gateway,Direct,Critical
+Interbank Transfer,Core Banking System,Direct,Critical
+Interbank Transfer,External Payment Provider,External,Critical
+Interbank Transfer,Payment Service,Direct,Critical
+Intrabank Transfer,API Gateway,Direct,High
+Intrabank Transfer,Core Banking System,Direct,Critical
+Intrabank Transfer,Payment Service,Direct,Critical
+OTP,Authentication Service,Direct,High
+OTP,OTP Provider,External,Critical

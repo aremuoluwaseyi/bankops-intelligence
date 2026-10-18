@@ -1,0 +1,1 @@
+alert_id,monitoring_window_id,incident_id,service_id,window_start,expected_component_id,predicted_component_id,top1_correct,top3_correct,expected_rank,evidence_strength,candidate_count,root_cause_confirmed

@@ -1,0 +1,6 @@
+incident_id,component_id,component_name,metric_name,avg_metric,max_metric,observations
+INC001,C003,External Payment Provider,latency_ms,5269.2,5872.4,7
+INC002,C004,OTP Provider,latency_ms,3860.0,4415.4,6
+INC003,C006,Operational Database,query_latency_ms,1539.8,1627.3,6
+INC004,C008,Bill Payment Provider,latency_ms,4842.8,6035.6,6
+INC005,C001,Payment Service,latency_ms,2295.3,2517.6,7

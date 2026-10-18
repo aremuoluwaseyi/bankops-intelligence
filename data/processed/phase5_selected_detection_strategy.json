@@ -1,0 +1,6 @@
+{
+  "primary_detection_strategy": "Rule baseline",
+  "secondary_signal": "Tuned Isolation Forest anomaly score",
+  "reason": "On the controlled synthetic benchmark the rule baseline has the highest F1 and zero false positives. The tuned Isolation Forest is retained as a complementary anomaly score for future generalization testing, not as the primary incident decision.",
+  "production_caution": "Selection is provisional and must be re-evaluated on more varied temporal and real-world-like data."
+}

@@ -1,0 +1,29 @@
+{
+  "alerts_evaluated": 54,
+  "alerts_with_expected_component": 54,
+  "match_rate": 1.0,
+  "top1_relevance_on_labeled_alerts": 1.0,
+  "hit_at_3_on_labeled_alerts": 1.0,
+  "mrr_on_labeled_alerts": 1.0,
+  "traceability_rate": 1.0,
+  "verification_required_rate": 1.0,
+  "expected_component_counts": {
+    "C001": 23,
+    "C003": 6,
+    "C004": 10,
+    "C006": 10,
+    "C008": 5
+  },
+  "interpretation": "In-sample synthetic, exact component-ID matching; correctness largely inherits Phase 6 candidate rankings. Not an independent test of semantic relevance or real-world RAG.",
+  "robustness_probes": {
+    "no_candidates": true,
+    "unknown_component": true,
+    "unsafe_document_excluded": true,
+    "ambiguous_candidates_ordered": true,
+    "repeatable_hash": true,
+    "no_confirmation": true,
+    "no_ground_truth_needed": true
+  },
+  "robustness_passed": 7,
+  "robustness_total": 7
+}

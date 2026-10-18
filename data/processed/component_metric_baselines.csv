@@ -1,0 +1,11 @@
+component_id,component_name,metric_name,unit,baseline_avg_metric,baseline_p95_metric,baseline_max_metric
+C001,Payment Service,latency_ms,ms,521.21,675.8,782.25
+C002,Core Banking System,latency_ms,ms,425.87,533.92,634.0
+C003,External Payment Provider,latency_ms,ms,875.79,1144.07,1311.6
+C004,OTP Provider,latency_ms,ms,599.52,805.52,967.14
+C005,Authentication Service,latency_ms,ms,300.83,385.11,444.46
+C006,Operational Database,query_latency_ms,ms,109.93,151.58,170.67
+C007,API Gateway,latency_ms,ms,183.44,245.07,293.44
+C008,Bill Payment Provider,latency_ms,ms,762.87,986.75,1194.26
+C009,Airtime Provider,latency_ms,ms,688.44,882.79,1069.59
+C010,Account Service API,latency_ms,ms,364.08,463.12,507.52

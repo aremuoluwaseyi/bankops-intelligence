@@ -1,0 +1,19 @@
+{
+  "alerts_evaluated": 54,
+  "top1_correct": 54,
+  "top1_accuracy": 1.0,
+  "top3_correct": 54,
+  "top3_accuracy": 1.0,
+  "multi_source_alerts": 54,
+  "unconfirmed_root_cause_alerts": 54,
+  "incident_families_with_alerts": 5,
+  "known_injected_incident_families": 5,
+  "missed_incident_windows_in_detection": 1,
+  "evaluation_scope": "Controlled synthetic incident windows with a Phase 5 alert only",
+  "limitations": [
+    "Alert-level metrics exclude the missed detection window.",
+    "Windows from one incident are correlated, not independent test cases.",
+    "Candidate ranking uses synthetic error/health/metric signatures.",
+    "No production diagnosis accuracy or causal verification is claimed."
+  ]
+}

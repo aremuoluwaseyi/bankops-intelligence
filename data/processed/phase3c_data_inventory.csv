@@ -1,0 +1,10 @@
+category,files_or_artifacts,purpose
+Reference data,services.csv; components.csv; service_dependencies.csv,"Defines customer-facing services, technical components and dependencies"
+Normal baseline,transactions_normal.csv; application_logs_normal.csv; service_health_normal.csv; component_metrics_normal.csv,Provides healthy reference behaviour
+Incident evidence,transactions_incidents.csv; application_logs_incidents.csv; service_health_incidents.csv; component_metrics_incidents.csv,Provides controlled abnormal behaviour
+Ground truth,incident_ground_truth.csv,Stores the known synthetic cause separately for evaluation
+Healthy controls,healthy_control_transactions.csv; healthy_control_ground_truth.csv,Tests false positives using unusual but healthy activity
+Change evidence,change_events.csv,Supports temporal investigation of releases/changes
+Validation,phase3c_step7_validation_report.csv,Automated data-quality gate
+SQL database,database/bankops.db,Relational store used for evidence retrieval and later monitoring
+Investigation outputs,sql_incident_investigation_summary.csv and related outputs,Demonstrates evidence-first SQL investigation

@@ -1,0 +1,15 @@
+{
+  "handoffs": 54,
+  "matched": 54,
+  "unmatched": 0,
+  "unique_documents": [
+    "RUNBOOK-C001",
+    "RUNBOOK-C003",
+    "RUNBOOK-C004",
+    "RUNBOOK-C006",
+    "RUNBOOK-C007",
+    "RUNBOOK-C008"
+  ],
+  "method": "deterministic_component_lookup",
+  "llm_used": false
+}

@@ -1,0 +1,14 @@
+feature,role
+transaction_volume,ML input feature
+failure_rate_pct,ML input feature
+p95_response_ms,ML input feature
+max_response_ms,ML input feature
+max_component_metric_ratio,ML input feature
+avg_component_availability_pct,ML input feature
+max_health_check_ms,ML input feature
+degraded_components,ML input feature
+down_components,ML input feature
+warn_logs,ML input feature
+error_logs,ML input feature
+warn_error_logs,ML input feature
+technical_evidence_available,ML input feature

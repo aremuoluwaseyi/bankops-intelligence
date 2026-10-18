@@ -1,0 +1,6 @@
+incident_id,expected_component_id,alerts_evaluated,top1_correct,top1_accuracy,top3_correct
+INC001,C003,6,6,1.0,6
+INC002,C004,10,10,1.0,10
+INC003,C006,10,10,1.0,10
+INC004,C008,5,5,1.0,5
+INC005,C001,23,23,1.0,23

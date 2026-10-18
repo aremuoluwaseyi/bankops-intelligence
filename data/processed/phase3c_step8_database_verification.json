@@ -1,0 +1,17 @@
+{
+  "integrity_check": "ok",
+  "foreign_key_violations": 0,
+  "table_row_counts": {
+    "services": 7,
+    "components": 10,
+    "service_dependencies": 20,
+    "transactions": 19100,
+    "application_logs": 2065,
+    "service_health": 2912,
+    "component_metrics": 2912,
+    "change_events": 2,
+    "incident_ground_truth": 5,
+    "healthy_control_ground_truth": 3
+  },
+  "database_bytes": 5079040
+}

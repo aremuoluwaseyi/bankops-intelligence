@@ -1,0 +1,8 @@
+{
+  "total": 54,
+  "queued_for_analyst_review": 54,
+  "validation_exceptions": 0,
+  "external_notifications_sent": 0,
+  "automated_remediations": 0,
+  "scope": "Offline workflow design and analyst work-queue creation only; scheduling and notification integration are not implemented."
+}

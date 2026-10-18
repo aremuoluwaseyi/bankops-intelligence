@@ -1,0 +1,286 @@
+{
+  "scope": "deterministic_source_fidelity_not_independent_semantic_quality",
+  "contracts": 54,
+  "narratives": 54,
+  "evaluated_alerts": 54,
+  "passed": 54,
+  "failed": 0,
+  "issue_counts": {},
+  "limitations": [
+    "Exact template reproduction is checked against the same generator, not independent expert judgment.",
+    "Synthetic data and deterministic component matching cannot establish production accuracy.",
+    "No verification of whether the original telemetry is factually correct."
+  ],
+  "per_alert": [
+    {
+      "alert_id": "ALERT_MW_025758AF5844",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_08D860FE3CAD",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_1C7779964659",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_27946FB1CB9A",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_32B0722C1F66",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_3C3156EB0A51",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_3EC3A5CBCF65",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_412E028D300B",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_445FB503C11A",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_463B10E11DC2",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_48408EDC7656",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_4E4E7F4FFD53",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_5198D7D3BF8A",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_528777AB2F6C",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_582536E654FF",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_6605F26C9A8E",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_6AB3BB1FF053",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_6C109CBA35B5",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_70FD42BB2E1D",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_7169CFA48CCF",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_741E7C84D806",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_790B45839562",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_809A372D83F9",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_84EAD865F698",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_8A22976067EE",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_8B9A0C4014EE",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_9402DEC0D35C",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_94F29CF9B290",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_997CBEB31558",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_A145F7097DB6",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_A16D80CD5FA9",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_A2B2F0FE4B98",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_A508F0F2242E",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_A59EB2D55AC3",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_A73366FC9910",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_A7997F27B032",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_ADED13AE5E3A",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_AEC45DFA3B41",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_B187BB24AA43",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_B46113CD597F",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_BAFE28FCE9FA",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_BCD163654942",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_BCF73DDCAC8E",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_C73984AAE16E",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_CC242DC37E8E",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_D13242504EDD",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_D39ACDDED3A4",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_DA5593703185",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_DB212867F4E0",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_E737109ED168",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_E9AB12FFF5A8",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_EFDE2E01FC93",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_F1617A2FBDD9",
+      "passed": true,
+      "issues": []
+    },
+    {
+      "alert_id": "ALERT_MW_FF664D97E5A8",
+      "passed": true,
+      "issues": []
+    }
+  ]
+}

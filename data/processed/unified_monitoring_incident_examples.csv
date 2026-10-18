@@ -1,0 +1,6 @@
+scenario,service_id,window_start,window_end,transaction_volume,successful_transactions,failed_transactions,success_rate_pct,failure_rate_pct,avg_response_ms,p95_response_ms,max_response_ms,unique_error_codes,dependent_components_observed,max_component_metric_ratio,avg_component_availability_pct,max_health_check_ms,degraded_components,down_components,total_logs,warn_logs,error_logs,warn_error_logs,components_with_logs,technical_evidence_available,evidence_sources_present
+INC001,S001,2026-10-01 10:40:00,2026-10-01 10:45:00,91,74,17,81.32,18.68,3982.8,5504.5,6051,1,1,5.38,97.148,607.0,1,0,27,10,17,27,1,1,3
+INC002,S004,2026-10-01 14:35:00,2026-10-01 14:40:00,72,60,12,83.33,16.67,3145.17,4625.4,5390,1,1,6.52,99.368,549.0,1,0,18,6,12,18,1,1,3
+INC003,S003,2026-10-01 16:10:00,2026-10-01 16:15:00,54,44,10,81.48,18.52,1110.85,1467.8,1924,1,1,14.34,99.948,95.0,0,0,19,9,10,19,1,1,3
+INC004,S005,2026-10-01 18:35:00,2026-10-01 18:40:00,110,87,23,79.09,20.91,3763.75,5344.15,6181,1,1,5.37,97.184,636.0,1,0,42,19,23,42,1,1,3
+INC005,S001,2026-10-01 20:20:00,2026-10-01 20:25:00,33,25,8,75.76,24.24,1775.88,2337.0,2415,1,1,4.81,99.917,261.0,0,0,10,2,8,10,1,1,3

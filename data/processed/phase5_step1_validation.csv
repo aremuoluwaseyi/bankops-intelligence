@@ -1,0 +1,9 @@
+check,status
+Unique trace IDs,PASS
+Scenario excluded,PASS
+Target excluded,PASS
+Minimum-volume safeguard,PASS
+Binary predictions,PASS
+All labels matched,PASS
+Healthy controls not flagged,PASS
+Confusion matrix complete,PASS

@@ -1,0 +1,7 @@
+scenario,total_logs,warn_logs,error_logs,failed_transactions,distinct_transaction_errors
+INC001,198,98,100,100,1
+INC002,187,110,77,77,1
+INC003,179,115,64,64,1
+INC004,203,94,109,109,1
+INC005,277,143,134,134,1
+NORMAL,1021,75,46,121,8

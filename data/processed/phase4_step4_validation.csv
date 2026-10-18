@@ -1,0 +1,7 @@
+check,status
+Row preservation,PASS
+Unique service windows,PASS
+Transaction KPIs complete,PASS
+Counts non-negative,PASS
+Incident technical evidence,PASS
+Healthy-control missingness explicit,PASS

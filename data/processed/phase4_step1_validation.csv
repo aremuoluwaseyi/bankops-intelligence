@@ -1,0 +1,7 @@
+check,status,detail
+KPI rows created,PASS,"2,071 five-minute service windows"
+Rates bounded,PASS,Success/failure rates are within 0-100%
+Rates reconcile,PASS,Success + failure approximately equals 100%
+Counts reconcile,PASS,Success + failed counts equal volume
+Positive latency,PASS,All average response times are positive
+Incident separation,PASS,Incident windows have higher mean failure rate than healthy controls

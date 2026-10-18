@@ -1,0 +1,58 @@
+category,check,status,details
+Uniqueness,services.csv: service_id unique,PASS,0 duplicate value(s)
+Uniqueness,components.csv: component_id unique,PASS,0 duplicate value(s)
+Uniqueness,service_dependencies.csv: dependency_id unique,PASS,0 duplicate value(s)
+Uniqueness,transactions_normal.csv: transaction_id unique,PASS,0 duplicate value(s)
+Uniqueness,transactions_incidents.csv: transaction_id unique,PASS,0 duplicate value(s)
+Uniqueness,healthy_control_transactions.csv: transaction_id unique,PASS,0 duplicate value(s)
+Uniqueness,application_logs_normal.csv: log_id unique,PASS,0 duplicate value(s)
+Uniqueness,application_logs_incidents.csv: log_id unique,PASS,0 duplicate value(s)
+Uniqueness,service_health_normal.csv: health_id unique,PASS,0 duplicate value(s)
+Uniqueness,service_health_incidents.csv: health_id unique,PASS,0 duplicate value(s)
+Uniqueness,component_metrics_normal.csv: metric_id unique,PASS,0 duplicate value(s)
+Uniqueness,component_metrics_incidents.csv: metric_id unique,PASS,0 duplicate value(s)
+Uniqueness,incident_ground_truth.csv: incident_id unique,PASS,0 duplicate value(s)
+Uniqueness,healthy_control_ground_truth.csv: control_id unique,PASS,0 duplicate value(s)
+Uniqueness,change_events.csv: change_id unique,PASS,0 duplicate value(s)
+Missing values,services.csv: required fields complete,PASS,0 missing required value(s)
+Missing values,components.csv: required fields complete,PASS,0 missing required value(s)
+Missing values,service_dependencies.csv: required fields complete,PASS,0 missing required value(s)
+Missing values,transactions_normal.csv: required fields complete,PASS,0 missing required value(s)
+Missing values,transactions_incidents.csv: required fields complete,PASS,0 missing required value(s)
+Missing values,healthy_control_transactions.csv: required fields complete,PASS,0 missing required value(s)
+Missing values,incident_ground_truth.csv: required fields complete,PASS,0 missing required value(s)
+Missing values,healthy_control_ground_truth.csv: required fields complete,PASS,0 missing required value(s)
+Referential integrity,transactions_normal.csv.service_id -> services.csv.service_id,PASS,0 invalid reference(s)
+Referential integrity,transactions_incidents.csv.service_id -> services.csv.service_id,PASS,0 invalid reference(s)
+Referential integrity,healthy_control_transactions.csv.service_id -> services.csv.service_id,PASS,0 invalid reference(s)
+Referential integrity,application_logs_normal.csv.service_id -> services.csv.service_id,PASS,0 invalid reference(s)
+Referential integrity,application_logs_normal.csv.component_id -> components.csv.component_id,PASS,0 invalid reference(s)
+Referential integrity,application_logs_incidents.csv.service_id -> services.csv.service_id,PASS,0 invalid reference(s)
+Referential integrity,application_logs_incidents.csv.component_id -> components.csv.component_id,PASS,0 invalid reference(s)
+Referential integrity,service_health_normal.csv.component_id -> components.csv.component_id,PASS,0 invalid reference(s)
+Referential integrity,service_health_incidents.csv.component_id -> components.csv.component_id,PASS,0 invalid reference(s)
+Referential integrity,component_metrics_normal.csv.component_id -> components.csv.component_id,PASS,0 invalid reference(s)
+Referential integrity,component_metrics_incidents.csv.component_id -> components.csv.component_id,PASS,0 invalid reference(s)
+Referential integrity,change_events.csv.component_id -> components.csv.component_id,PASS,0 invalid reference(s)
+Referential integrity,service_dependencies.csv.service_id -> services.csv.service_id,PASS,0 invalid reference(s)
+Referential integrity,service_dependencies.csv.component_id -> components.csv.component_id,PASS,0 invalid reference(s)
+Referential integrity,healthy_control_ground_truth.csv.service_id -> services.csv.service_id,PASS,0 invalid reference(s)
+Referential integrity,incident_ground_truth.csv.affected_component -> components.csv.component_id,PASS,0 invalid reference(s)
+Cross-file uniqueness,transaction_id unique across related datasets,PASS,0 duplicate value(s) across files
+Cross-file uniqueness,correlation_id unique across related datasets,PASS,0 duplicate value(s) across files
+Cross-file uniqueness,log_id unique across related datasets,PASS,0 duplicate value(s) across files
+Cross-file uniqueness,health_id unique across related datasets,PASS,0 duplicate value(s) across files
+Cross-file uniqueness,metric_id unique across related datasets,PASS,0 duplicate value(s) across files
+Scenario consistency,transactions_normal.csv labelled NORMAL,PASS,labels=['NORMAL']
+Scenario consistency,application_logs_normal.csv labelled NORMAL,PASS,labels=['NORMAL']
+Scenario consistency,service_health_normal.csv labelled NORMAL,PASS,labels=['NORMAL']
+Scenario consistency,component_metrics_normal.csv labelled NORMAL,PASS,labels=['NORMAL']
+Scenario consistency,healthy controls labelled HEALTHY_CONTROL,PASS,labels=['HEALTHY_CONTROL']
+Ground truth,all healthy controls expected_incident=False,PASS,0 incorrect label(s)
+Timestamp logic,incident start precedes end,PASS,0 invalid interval(s)
+Ground truth,incident transaction scenario has matching ground truth,PASS,0 unmatched scenario(s)
+Value range,transactions_normal.csv: response_time_ms > 0,PASS,0 invalid value(s)
+Value range,transactions_incidents.csv: response_time_ms > 0,PASS,0 invalid value(s)
+Value range,healthy_control_transactions.csv: response_time_ms > 0,PASS,0 invalid value(s)
+Value range,service_health_normal.csv: availability_pct between 0 and 100,PASS,0 invalid value(s)
+Value range,service_health_incidents.csv: availability_pct between 0 and 100,PASS,0 invalid value(s)

@@ -1,0 +1,7 @@
+check,status,detail
+Transaction error rows are failures only,PASS,Only failed transactions contribute to transaction error monitoring.
+Log levels valid,PASS,All log levels are expected.
+Service references valid,PASS,All monitored service IDs resolve.
+Component references valid,PASS,All log component IDs resolve.
+Non-negative counts,PASS,All log counts are non-negative.
+Window logic valid,PASS,Every log falls inside its 5-minute window.

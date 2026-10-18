@@ -1,0 +1,8 @@
+check,status,detail
+Unified monitoring rows preserved,PASS,"2,071 monitoring windows handed off."
+Scenario excluded from feature handoff,PASS,Synthetic scenario identity is not present in detector input.
+Evaluation labels separated,PASS,Ground truth is stored separately for later scoring.
+Operational features documented,PASS,Every intended detection feature is in the feature contract.
+No ground-truth root cause in features,PASS,Confirmed synthetic answers are excluded.
+Missing technical evidence retained,PASS,Missing telemetry remains explicitly represented.
+Monitoring phase artifacts present,PASS,All four major Phase 4 monitoring artifacts are present.

@@ -1,0 +1,9 @@
+{
+  "monitoring_windows": 2071,
+  "alerts": 54,
+  "non_alert_windows": 2017,
+  "primary_detector": "rule_based_v1",
+  "secondary_scores_present": 2071,
+  "evaluation_labels_used_for_detection": false,
+  "human_verification_required": true
+}

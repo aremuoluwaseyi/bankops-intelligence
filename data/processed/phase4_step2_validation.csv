@@ -1,0 +1,7 @@
+check,status,detail
+Component references valid,PASS,Every monitoring row maps to a known component.
+Metric values positive,PASS,All component metric values are positive.
+Availability valid,PASS,Availability is between 0 and 100 percent.
+Health states valid,PASS,Only expected health states are present.
+Baseline available,PASS,Every component metric has a NORMAL baseline.
+Unique evidence rows,PASS,No duplicate component/time/scenario monitoring rows.

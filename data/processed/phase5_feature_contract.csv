@@ -1,0 +1,29 @@
+field,role,allowed_as_detection_feature,reason
+monitoring_window_id,identifier/context,NO,Traceability only.
+window_start,identifier/context,NO,Traceability only.
+window_end,identifier/context,NO,Traceability only.
+service_id,identifier/context,NO,Traceability only.
+transaction_volume,operational feature,YES,Operational measurement available at detection time.
+successful_transactions,operational feature,YES,Operational measurement available at detection time.
+failed_transactions,operational feature,YES,Operational measurement available at detection time.
+success_rate_pct,operational feature,YES,Operational measurement available at detection time.
+failure_rate_pct,operational feature,YES,Operational measurement available at detection time.
+avg_response_ms,operational feature,YES,Operational measurement available at detection time.
+p95_response_ms,operational feature,YES,Operational measurement available at detection time.
+max_response_ms,operational feature,YES,Operational measurement available at detection time.
+unique_error_codes,operational feature,YES,Operational measurement available at detection time.
+dependent_components_observed,operational feature,YES,Operational measurement available at detection time.
+max_component_metric_ratio,operational feature,YES,Operational measurement available at detection time.
+avg_component_availability_pct,operational feature,YES,Operational measurement available at detection time.
+max_health_check_ms,operational feature,YES,Operational measurement available at detection time.
+degraded_components,operational feature,YES,Operational measurement available at detection time.
+down_components,operational feature,YES,Operational measurement available at detection time.
+total_logs,operational feature,YES,Operational measurement available at detection time.
+warn_logs,operational feature,YES,Operational measurement available at detection time.
+error_logs,operational feature,YES,Operational measurement available at detection time.
+warn_error_logs,operational feature,YES,Operational measurement available at detection time.
+components_with_logs,operational feature,YES,Operational measurement available at detection time.
+technical_evidence_available,operational feature,YES,Operational measurement available at detection time.
+evidence_sources_present,operational feature,YES,Operational measurement available at detection time.
+scenario,evaluation-only,NO,Synthetic experiment identity; target leakage if used.
+expected_incident,evaluation-only,NO,Ground-truth target used only after prediction.

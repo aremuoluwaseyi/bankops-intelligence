@@ -1,0 +1,2 @@
+TP,TN,FP,FN,precision,recall,specificity,f1,accuracy,normal_quantile_threshold
+55,2006,10,0,0.8461538461538461,1.0,0.9950396825396826,0.9166666666666666,0.9951714147754708,0.995

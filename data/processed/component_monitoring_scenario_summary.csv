@@ -1,0 +1,7 @@
+scenario,observations,components,up_observations,degraded_observations,down_observations,avg_availability_pct,avg_health_check_ms,max_metric_vs_baseline
+INC001,7,1,0,7,0,98.38,627.3,6.71
+INC002,6,1,0,6,0,97.824,463.7,7.36
+INC003,6,1,6,0,0,99.934,172.7,14.8
+INC004,6,1,0,6,0,97.623,576.5,7.91
+INC005,7,1,7,0,0,99.934,255.4,4.83
+NORMAL,2880,10,2880,0,0,99.949,102.2,1.61

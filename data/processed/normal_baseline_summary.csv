@@ -1,0 +1,8 @@
+service_id,service_name,transactions,success_rate,avg_response_ms,failed
+S001,Interbank Transfer,2668,98.31,1167.7,45
+S002,Intrabank Transfer,2161,99.26,729.2,16
+S003,Authentication,2407,99.38,422.7,15
+S004,OTP,1464,98.7,651.0,19
+S005,Bill Payment,1423,98.95,995.7,15
+S006,Airtime and Data,1048,99.14,773.5,9
+S007,Account Services,829,99.76,503.2,2

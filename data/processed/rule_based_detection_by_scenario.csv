@@ -1,0 +1,8 @@
+scenario,windows,expected_incident_windows,predicted_incident_windows,correct,accuracy_pct
+HEALTHY_CONTROL,39,0,0,39,100.0
+INC001,6,6,6,6,100.0
+INC002,10,10,10,10,100.0
+INC003,10,10,10,10,100.0
+INC004,5,5,5,5,100.0
+INC005,24,24,23,23,95.83
+NORMAL,1977,0,0,1977,100.0

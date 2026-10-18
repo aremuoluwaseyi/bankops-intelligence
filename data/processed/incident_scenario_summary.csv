@@ -1,0 +1,6 @@
+incident_id,incident_name,transactions,observed_failure_pct,avg_transaction_ms,avg_component_metric,health_state,ground_truth_domain
+INC001,External Payment Provider Degradation,650,15.38,3997.2,5269.2,DEGRADED,External Payment Provider
+INC002,OTP Provider Degradation,650,11.85,3030.7,3860.0,DEGRADED,OTP Provider
+INC003,Operational Database Slowdown,650,9.85,1107.0,1539.8,UP,Operational Database
+INC004,Bill Payment Provider Degradation,650,16.77,3703.0,4842.8,DEGRADED,Bill Payment Provider
+INC005,Post-Deployment Payment Service Regression,900,14.89,1779.6,2295.3,UP,Payment Service

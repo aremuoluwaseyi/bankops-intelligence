@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "mode": "offline_batch",
+  "status": "SUCCEEDED",
+  "started_at_utc": "2026-10-13T13:41:14.797791+00:00",
+  "stages": [
+    {
+      "stage": "detection",
+      "module": "src.detection.run_detection_handoff",
+      "returncode": 0,
+      "stdout_tail": "{\n  \"monitoring_windows\": 2071,\n  \"alerts\": 54,\n  \"non_alert_windows\": 2017,\n  \"primary_detector\": \"rule_based_v1\",\n  \"secondary_scores_present\": 2071,\n  \"evaluation_labels_used_for_detection\": false,\n  \"human_verification_required\": true\n}\n",
+      "stderr_tail": "",
+      "artifact": "phase5_investigation_handoff.csv",
+      "record_count": 54
+    },
+    {
+      "stage": "evidence_collection",
+      "module": "src.investigation.collect_evidence",
+      "returncode": 0,
+      "stdout_tail": "Generated 54 evidence packages: /mnt/data/p9s2/bankops-intelligence/data/processed/phase6_step1_evidence_packages.jsonl\n",
+      "stderr_tail": "",
+      "artifact": "phase6_step1_evidence_packages.jsonl",
+      "record_count": 54
+    },
+    {
+      "stage": "evidence_correlation",
+      "module": "src.investigation.correlate_evidence",
+      "returncode": 0,
+      "stdout_tail": "Correlated 54 alerts; 54 have multi-source candidates\n",
+      "stderr_tail": "",
+      "artifact": "phase6_step2_correlated_evidence.jsonl",
+      "record_count": 54
+    },
+    {
+      "stage": "investigation_handoff",
+      "module": "src.investigation.harden_investigation",
+      "returncode": 0,
+      "stdout_tail": "Processed 54 alerts; status distribution: {'CANDIDATE_REQUIRES_VERIFICATION': 54}\n",
+      "stderr_tail": "",
+      "artifact": "phase6_step4_investigation_handoff.jsonl",
+      "record_count": 54
+    },
+    {
+      "stage": "knowledge_retrieval",
+      "module": "src.knowledge.retrieval_closeout",
+      "returncode": 0,
+      "stdout_tail": "{\n  \"handoffs\": 54,\n  \"matched\": 54,\n  \"unmatched\": 0,\n  \"integrity_verified\": true,\n  \"llm_used\": false\n}\n",
+      "stderr_tail": "",
+      "artifact": "phase7_step4_verified_retrieval.jsonl",
+      "record_count": 54
+    },
+    {
+      "stage": "explanation_contract",
+      "module": "src.explanation.explanation_contract",
+      "returncode": 0,
+      "stdout_tail": "Validated 54 evidence explanation contracts\n",
+      "stderr_tail": "",
+      "artifact": "phase8_step1_explanation_contracts.jsonl",
+      "record_count": 54
+    },
+    {
+      "stage": "explanation_generation",
+      "module": "src.explanation.generate_explanations",
+      "returncode": 0,
+      "stdout_tail": "Generated 54 evidence-grounded narratives\n",
+      "stderr_tail": "",
+      "artifact": "phase8_step2_analyst_explanations.jsonl",
+      "record_count": 54
+    },
+    {
+      "stage": "explanation_validation",
+      "module": "src.explanation.closeout",
+      "returncode": 0,
+      "stdout_tail": "{\n  \"total\": 54,\n  \"ready_for_analyst_review\": 54,\n  \"withheld\": 0,\n  \"limitations\": \"Deterministic source-fidelity gate only; no independent expert review or production security certification.\"\n}\n",
+      "stderr_tail": "",
+      "artifact": "phase8_step4_review_handoffs.jsonl",
+      "record_count": 54
+    },
+    {
+      "stage": "analyst_queue",
+      "module": "src.orchestration.workflow",
+      "returncode": 0,
+      "stdout_tail": "{\n  \"total\": 54,\n  \"queued_for_analyst_review\": 54,\n  \"validation_exceptions\": 0,\n  \"external_notifications_sent\": 0,\n  \"automated_remediations\": 0,\n  \"scope\": \"Offline workflow design and analyst work-queue creation only; scheduling and notification integration are not implemented.\"\n}\n",
+      "stderr_tail": "",
+      "artifact": "phase9_step1_work_queue.jsonl",
+      "record_count": 54
+    }
+  ],
+  "external_notifications_sent": 0,
+  "automated_remediations": 0,
+  "limitations": "No continuous monitoring, autonomous scheduling, external alerts or remediation.",
+  "work_items": 54,
+  "queued_for_review": 54,
+  "exceptions": 0,
+  "completed_at_utc": "2026-10-13T13:41:21.338783+00:00"
+}

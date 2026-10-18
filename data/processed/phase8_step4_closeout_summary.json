@@ -1,0 +1,6 @@
+{
+  "total": 54,
+  "ready_for_analyst_review": 54,
+  "withheld": 0,
+  "limitations": "Deterministic source-fidelity gate only; no independent expert review or production security certification."
+}

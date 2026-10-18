@@ -1,0 +1,56 @@
+{
+  "mode": "bounded_foreground_local_runner",
+  "requested_cycles": 2,
+  "completed_cycles": 2,
+  "status": "SUCCEEDED",
+  "external_notifications_sent": 0,
+  "automatic_remediations": 0,
+  "cycles": [
+    {
+      "cycle_number": 1,
+      "started_at_utc": "2026-10-13T14:07:34.598556+00:00",
+      "status": "SUCCEEDED",
+      "result": {
+        "received": 54,
+        "newly_queued": 0,
+        "already_queued": 54,
+        "external_notifications_sent": 0,
+        "automatic_remediations": 0,
+        "mode": "on_demand_cycle",
+        "pipeline_rerun": false,
+        "scheduler_running": false,
+        "alert_delivery": "local_sqlite_outbox_only"
+      },
+      "readiness": {
+        "local_notification_candidates": 54,
+        "validation_exceptions": 0,
+        "external_notifications_sent": 0,
+        "delivery_enabled": false,
+        "human_review_required": true
+      }
+    },
+    {
+      "cycle_number": 2,
+      "started_at_utc": "2026-10-13T14:07:34.601114+00:00",
+      "status": "SUCCEEDED",
+      "result": {
+        "received": 54,
+        "newly_queued": 0,
+        "already_queued": 54,
+        "external_notifications_sent": 0,
+        "automatic_remediations": 0,
+        "mode": "on_demand_cycle",
+        "pipeline_rerun": false,
+        "scheduler_running": false,
+        "alert_delivery": "local_sqlite_outbox_only"
+      },
+      "readiness": {
+        "local_notification_candidates": 54,
+        "validation_exceptions": 0,
+        "external_notifications_sent": 0,
+        "delivery_enabled": false,
+        "human_review_required": true
+      }
+    }
+  ]
+}

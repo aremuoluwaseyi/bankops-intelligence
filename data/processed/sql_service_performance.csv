@@ -1,0 +1,8 @@
+service_name,transactions,failure_pct,avg_response_ms
+Interbank Transfer,5155,4.02,1572.6
+Authentication,3056,2.81,770.8
+Airtime and Data,2383,2.14,883.1
+Intrabank Transfer,2373,2.15,824.8
+Bill Payment,2289,6.6,1835.8
+Account Services,2058,2.14,611.5
+OTP,1786,3.19,1084.8

@@ -1,0 +1,9 @@
+check,status
+Threshold tuned without incident labels,PASS
+Chosen threshold derived from NORMAL scores,PASS
+No target fields in ML features,PASS
+Original ML false positives captured,PASS
+Rule false negatives captured,PASS
+Tuned predictions complete,PASS
+Strategy comparison complete,PASS
+Selection documented,PASS

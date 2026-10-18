@@ -1,0 +1,9 @@
+check,status
+No labels in ML input,PASS
+Normal-only training,PASS
+Reproducible model,PASS
+Missing values handled,PASS
+Binary predictions,PASS
+All rows evaluated,PASS
+Confusion matrix complete,PASS
+Comparison created,PASS

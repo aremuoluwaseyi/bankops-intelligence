@@ -1,0 +1,6 @@
+incident_id,incident_name,component_name,ground_truth_failure_domain,severity
+INC001,External Payment Provider Degradation,External Payment Provider,External Payment Provider,High
+INC002,OTP Provider Degradation,OTP Provider,OTP Provider,High
+INC003,Operational Database Slowdown,Operational Database,Operational Database,High
+INC004,Bill Payment Provider Degradation,Bill Payment Provider,Bill Payment Provider,High
+INC005,Post-Deployment Payment Service Regression,Payment Service,Payment Service,Critical

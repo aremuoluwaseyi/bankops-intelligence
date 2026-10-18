@@ -1,0 +1,4 @@
+control_id,transactions,success_rate,avg_response_ms,control_name,expected_incident
+CTRL001,1600,98.62,1229.8,Payday Volume Surge,False
+CTRL002,1100,99.09,797.7,Promotional Airtime Surge,False
+CTRL003,900,98.89,527.1,API Partner Traffic Spike,False
