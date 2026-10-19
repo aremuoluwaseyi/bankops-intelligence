@@ -68,3 +68,26 @@ def incident_dot(service, components, edges, health, suspected_component=None):
         lines.append(f'{json.dumps(cid)} [label={json.dumps(label)},fillcolor="{colors[state]}",penwidth={penwidth}];')
         lines.append(f'{json.dumps(service["service_id"])} -> {json.dumps(cid)} [label={json.dumps(edge["dependency_type"])}];')
     return '\n'.join(lines + ['}'])
+
+
+def compact_incident_dot(service, components, edges, health, suspected_component=None):
+    """Compact left-to-right dependency map with clean Graphviz labels."""
+    import json
+    ids = {r['component_id'] for r in components}
+    if not edges or any(r['component_id'] not in ids or r['component_id'] not in health for r in edges):
+        raise ValueError('Invalid dependency or health catalog')
+    colors = {'HEALTHY':'#dcfce7', 'DEGRADED':'#fef08a', 'DOWN':'#fecaca',
+              'UNAVAILABLE':'#fecaca', 'UNKNOWN':'#e5e7eb'}
+    lines = ['digraph focused {', 'rankdir=LR;', 'graph [bgcolor="transparent",pad="0.15",nodesep="0.25",ranksep="0.55",size="10,4",ratio="compress"];',
+             'node [shape=box,style="rounded,filled",fontname="Arial",fontsize=10,margin="0.12,0.07"];',
+             'edge [arrowsize=0.5,color="#94a3b8",fontsize=9];',
+             f'{json.dumps(service["service_id"])} [label={json.dumps(service["service_name"] + chr(10) + service["service_id"])},fillcolor="#bfdbfe"];']
+    by_id = {c['component_id']: c for c in components}
+    for link in edges:
+        cid = link['component_id']
+        status = health[cid]['status']
+        if status not in colors:
+            raise ValueError('Unsupported component status')
+        lines.append(f'{json.dumps(cid)} [label={json.dumps(by_id[cid]["component_name"] + chr(10) + cid + " | " + status)},fillcolor="{colors[status]}",penwidth={3 if cid == suspected_component else 1}];')
+        lines.append(f'{json.dumps(service["service_id"])} -> {json.dumps(cid)};')
+    return '\n'.join(lines + ['}'])
