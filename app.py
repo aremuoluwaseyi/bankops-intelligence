@@ -219,7 +219,36 @@ else:
                 ws_links = related_components(detail['service_id'], ws_edges)
                 ws_component_ids = [link['component_id'] for link in ws_links]
                 ws_health = health_at(ws_health_rows, ws_component_ids, detail['window_start'], detail['window_end'])
-                st.graphviz_chart(incident_dot(ws_service, ws_components, ws_links, ws_health, detail['proposed_component_id']), use_container_width=True)
+                from src.demo_intelligence import assess, simulate, SCENARIOS
+                from src.incident_topology_workspace import compact_incident_dot
+                ws_assessment = assess(ws_health, detail['proposed_component_id'])
+                m1, m2, m3 = st.columns(3)
+                m1.metric('Dependencies with recorded health', f"{ws_assessment['observed']}/{ws_assessment['total']}")
+                m2.metric('Unknown dependencies', ws_assessment['unknown'])
+                m3.metric('Recorded health coverage', f"{ws_assessment['coverage_pct']}%")
+                if ws_assessment['suspect_healthy']:
+                    st.warning('Evidence disagreement: the investigation proposes this component based on transaction logs or latency, while its latest infrastructure health check is HEALTHY. A successful health check does not prove business transactions are succeeding. Compare timestamps, transaction-level errors, and upstream/downstream observations before assigning cause.')
+                elif detail['proposed_component_id'] in ws_health and ws_health[detail['proposed_component_id']]['status'] == 'UNKNOWN':
+                    st.warning('The proposed component has no recent health observation. Its status is UNKNOWN, not healthy or down. Obtain additional telemetry before drawing conclusions.')
+                st.graphviz_chart(compact_incident_dot(ws_service, ws_components, ws_links, ws_health, detail['proposed_component_id']), use_container_width=True)
+                st.caption('Thick outline = proposed investigation component (not proven cause). Gray = missing or stale health evidence.')
+                st.markdown('#### Interactive failure what-if lab')
+                st.caption('Simulation changes the diagram for this visitor only. It does NOT modify stored observations, perform health probes, or represent a real incident.')
+                lab_left, lab_right = st.columns(2)
+                with lab_left:
+                    lab_component = st.selectbox('Dependency to simulate', ws_component_ids,
+                                                 format_func=lambda cid: next((c['component_name'] for c in ws_components if c['component_id'] == cid), cid),
+                                                 key='whatif_component_' + selected_id)
+                with lab_right:
+                    lab_scenario = st.selectbox('Synthetic scenario', list(SCENARIOS), key='whatif_scenario_' + selected_id)
+                lab_snapshot = simulate(ws_health, lab_component, lab_scenario)
+                if SCENARIOS[lab_scenario] is not None:
+                    st.warning('SIMULATED WHAT-IF — not recorded telemetry or an actual API outage')
+                    st.graphviz_chart(compact_incident_dot(ws_service, ws_components, ws_links, lab_snapshot,
+                                                           detail['proposed_component_id']), use_container_width=True)
+                    st.write('**Potentially affected service:**', ws_service['service_name'])
+                    st.write('**Hypothetical diagnostic priority:** Verify the selected dependency using actual health checks, request traces and application logs. No cause has been established.')
+
                 ws_names = {c['component_id']: c['component_name'] for c in ws_components}
                 ws_table = []
                 for link in ws_links:
@@ -259,7 +288,7 @@ else:
                     hc2.metric('Degraded', replay_counts['degraded'])
                     hc3.metric('Unavailable', replay_counts['unavailable'])
                     hc4.metric('Unknown / not observed', replay_counts['unknown'])
-                    st.graphviz_chart(incident_dot(ws_service, ws_components, ws_links, replay_health,
+                    st.graphviz_chart(compact_incident_dot(ws_service, ws_components, ws_links, replay_health,
                                                    detail['proposed_component_id']), use_container_width=True)
                     st.dataframe([{'Component': ws_names[cid], 'ID': cid,
                                    'Observed status': replay_health[cid]['status'],
@@ -373,8 +402,16 @@ try:
         focus_component = st.selectbox('Focus on an infrastructure component or API', [None] + list(topology_component_names),
                                        format_func=lambda value: 'All components' if value is None else display_name(value, topology_component_names),
                                        key='topology_component')
-    st.graphviz_chart(topology_dot(topology_services, topology_components, topology_edges,
-                                   focus_service, focus_component), use_container_width=True)
+    st.caption('Focused view is the default to avoid a very tall, hard-to-read diagram. Select a service to inspect its dependencies or a component to see dependent services.')
+    from src.dependency_topology import compact_topology_dot
+    show_full = st.checkbox('Show complete architecture (all 20 links)', value=False, key='show_full_topology')
+    if show_full:
+        with st.container(border=True):
+            st.graphviz_chart(topology_dot(topology_services, topology_components, topology_edges,
+                                           focus_service, focus_component), use_container_width=True)
+    else:
+        st.graphviz_chart(compact_topology_dot(topology_services, topology_components, topology_edges,
+                                               focus_service, focus_component), use_container_width=True)
     t1, t2, t3 = st.columns(3)
     t1.metric('Cataloged banking services', len(topology_services))
     t2.metric('Cataloged infrastructure components', len(topology_components))
@@ -398,6 +435,6 @@ try:
             st.dataframe([{'Alert': item['alert_id'], 'Service': display_name(detail['service_id'], topology_service_names),
                            'Possible failure domain': detail['proposed_failure_domain']}
                           for item, detail in associated], hide_index=True, use_container_width=True)
-    st.info('Component status is not shown as Healthy/Degraded/Down: this phase provides catalog-backed topology only. API tracing and evidence-timestamped health indicators are planned for Step 7.')
+    st.info('Architecture catalog only: this overview shows declared relationships. For timestamped health evidence and the interactive what-if scenario, select an incident in the Incident Explorer above. No live API tracing is connected.')
 except (FileNotFoundError, ValueError, KeyError, OSError) as exc:
     st.error(f'Synthetic topology unavailable or invalid: {exc}')
